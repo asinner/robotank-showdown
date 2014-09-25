@@ -1,11 +1,11 @@
 require 'rrobots'
 
-class Andrewstank
+class Pwnzer  
   include Robot
 
   def tick events
-    speed = 1
     accelerate(1)
-    turn_gun(2)
+    turn(5)
+    fire 3 if events['robot_scanned'].any?
   end
 end
